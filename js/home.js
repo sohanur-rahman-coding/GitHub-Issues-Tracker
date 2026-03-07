@@ -1,3 +1,4 @@
+let allSec = [];
 let openSection = [];
 let ClosedSection = [];
 const allBtn = document.getElementById("all-taps");
@@ -5,21 +6,27 @@ const openBtn = document.getElementById("open-tap");
 const closeBtn = document.getElementById("close-tap");
 const counter = document.getElementById("issues-count");
 
-// toggle fuction 
-const toggleBtn = (id) => {
-    allBtn.classList.add('inactive')
-    openBtn.classList.add('inactive')
-    closeBtn.classList.add('inactive')
 
-    allBtn.classList.remove('active')
-    openBtn.classList.remove('active')
-    closeBtn.classList.remove('active')
+// issues counter
+const updateCounter = (count) => {
+    counter.textContent = `${count} Issues`;
+};
+
+// toggle function
+const toggleBtn = (id) => {
+    allBtn.classList.add("inactive");
+    openBtn.classList.add("inactive");
+    closeBtn.classList.add("inactive");
+
+    allBtn.classList.remove("active");
+    openBtn.classList.remove("active");
+    closeBtn.classList.remove("active");
 
     const clickedBtn = document.getElementById(id);
 
-    clickedBtn.classList.remove('inactive')
-    clickedBtn.classList.add('active')
-}
+    clickedBtn.classList.remove("inactive");
+    clickedBtn.classList.add("active");
+};
 
 // step 1 : feteh all issues
 
@@ -30,20 +37,29 @@ const loadIssues = () => {
         .then((data) => displayIssues(data.data));
 };
 
+// displayIssues
+const displayIssues = (data) => {
+    data.forEach((element) => {
+        allSec.push(element);
+
+        if (element.status === "open") {
+            openSection.push(element);
+        } else if (element.status === "closed") {
+            ClosedSection.push(element);
+        }
+    });
+    showIssues(allSec);
+    toggleBtn("all-taps");
+    updateCounter(allSec.length);
+};
+
 // step 2 display issues
 
-const displayIssues = (data) => {
+const showIssues = (arr) => {
     const issuesContainer = document.getElementById("issues-container");
-
-data.forEach((element) => {
-
-    if (element.status === "open") {
-        openSection.push(element)
-    } 
-    else if (element.status === "closed") {
-        ClosedSection.push(element)
-    }
-
+    issuesContainer.innerHTML = "";
+    updateCounter(arr.length);
+    arr.forEach((element) => {
         let priorityColor = "";
 
         if (element.priority === "high") {
@@ -82,6 +98,7 @@ data.forEach((element) => {
         
         `;
         issuesContainer.appendChild(div);
+
     });
 };
 
@@ -147,6 +164,7 @@ const displayIssuesDetails = (detail) => {
 };
 console.log(openSection);
 console.log(ClosedSection);
+console.log(allSec);
 
 // step 5 show taps
 

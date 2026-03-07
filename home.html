@@ -48,9 +48,9 @@
 
         <!-- category section  -->
         <div class="cetagory px-8  my-8  shadow-[0_1px_6px_0_rgba(0,0,0,0.08)] py-4  rounded-md space-x-4 ">
-            <button onclick="toggleBtn('all-taps')"  id="all-taps" class="btn px-12  border border-gray-200 shadow-none  btn-primary">All</button>
-            <button onclick="toggleBtn('open-tap')" id="open-tap" class="btn px-12 ">Open</button>
-            <button onclick="toggleBtn('close-tap')"  id="close-tap" class="btn px-12">Closed</button>
+            <button onclick="toggleBtn('all-taps') ; showIssues(allSec)"  id="all-taps" class="btn px-12  border border-gray-200 shadow-none  btn-primary">All</button>
+            <button onclick="toggleBtn('open-tap') ; showIssues(openSection)" id="open-tap" class="btn px-12 ">Open</button>
+            <button onclick="toggleBtn('close-tap') ; showIssues(ClosedSection)"  id="close-tap" class="btn px-12">Closed</button>
         </div>
 
 
@@ -61,7 +61,7 @@
                 <img class="w-[50px] bg-blue-200 rounded-full p-2" src="assets/Aperture.png" alt="">
                 <div class="">
                     <h3 id="issues-count" class="text-[#1F2937] font-semibold text-[20px]">50 Issues</h3>
-                    <p class="text-[#64748B]"> Track and manage your project issues</p>
+                    <p class="text-[#64748b]"> Track and manage your project issues</p>
                 </div>
             </div>
             <div class="right flex gap-4">
