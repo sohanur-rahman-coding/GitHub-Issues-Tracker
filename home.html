@@ -17,7 +17,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
     </style>
     <!-- css file  -->
-     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -30,11 +30,22 @@
                 <img class="w-9" src="assets/github-logo.png" alt="">
                 <a class="btn btn-ghost text-xl">GitHub Issues Tracker</a>
             </div>
-            <div class="flex gap-2 ">
-                <input type="text" placeholder="🔍 Search issues..." class="input input-bordered w-24 md:w-auto" />
-
-                <div class="btn btn-primary px-4 py-3">
-                    <button> <i class="fa-solid fa-plus"></i> New Issue</button>
+            <div class=" ">
+                <div class="join">
+                    <div>
+                        <label class="input validator join-item">
+                            <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                                    stroke="currentColor">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.3-4.3"></path>
+                                </g>
+                            </svg>
+                            <input id="input-field" type="text" placeholder="Search issues..." required />
+                        </label>
+                        <div class="validator-hint hidden">Enter valid email address</div>
+                    </div>
+                    <button id="search-btn" class="btn btn-neutral join-item">Search</button>
                 </div>
 
 
@@ -48,9 +59,12 @@
 
         <!-- category section  -->
         <div class="cetagory px-8  my-8  shadow-[0_1px_6px_0_rgba(0,0,0,0.08)] py-4  rounded-md space-x-4 ">
-            <button onclick="toggleBtn('all-taps') ; showIssues(allSec)"  id="all-taps" class="btn px-12  border border-gray-200 shadow-none  btn-primary">All</button>
-            <button onclick="toggleBtn('open-tap') ; showIssues(openSection)" id="open-tap" class="btn px-12 ">Open</button>
-            <button onclick="toggleBtn('close-tap') ; showIssues(ClosedSection)"  id="close-tap" class="btn px-12">Closed</button>
+            <button onclick="toggleBtn('all-taps') ; showIssues(allSec)" id="all-taps"
+                class="btn px-12  border border-gray-200 shadow-none  btn-primary">All</button>
+            <button onclick="toggleBtn('open-tap') ; showIssues(openSection)" id="open-tap"
+                class="btn px-12 ">Open</button>
+            <button onclick="toggleBtn('close-tap') ; showIssues(ClosedSection)" id="close-tap"
+                class="btn px-12">Closed</button>
         </div>
 
 
@@ -77,7 +91,12 @@
 
         <!-- issues container  -->
         <section>
-            <div  id="issues-container" class=" grid grid-cols-1 md:grid-cols-3 gap-3 bg-[#FBFBFB]">
+            <!-- spinner -->
+            <div id="spinner" class="flex justify-center items-center h-40 hidden">
+                <span class="loading loading-spinner loading-xl"></span>
+            </div>
+            <!-- container for words when data is loading -->
+            <div id="issues-container" class=" grid grid-cols-1 md:grid-cols-3 gap-3 bg-[#FBFBFB]">
 
 
 
@@ -93,7 +112,6 @@
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
                     <div id="modal-container">
-                        
 
 
 
