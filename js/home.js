@@ -167,16 +167,16 @@ const displayIssuesDetails = (detail) => {
 
     <p class="mt-2 font-semibold">${detail.description}</p>
 
-    <div class="flex justify-start mt-4 bg-[#F8FAFC] p-6 gap-12 ">
+    <div class="flex justify-start mt-4 bg-[#F8FAFC] p-6 gap-20 ">
 
-      <div>
+      <div class="flex flex-col gap-2">
         <p>Assignee:</p>
         <p class="font-bold">${detail.author}</p>
       </div>
 
-      <div>
+      <div class="flex flex-col gap-2">
         <p>Priority:</p>
-        <p class="btn ${priorityColor} rounded-full px-2">${detail.priority}</p>
+        <p class="${priorityColor} rounded-full outline px-2" >${detail.priority}</p>
       </div>
 
     </div>
