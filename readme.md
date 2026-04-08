@@ -1,23 +1,66 @@
-1️⃣ What is the difference between var, let, and const?
+# 🚀 GitHub Issue Tracker
 
-  = those 3 are variables. Var is a old one we don't use it and it have some issues in scope. let means its also a variable and we can change its value after declare. Const ar also a variable and if we declare it then next time we cannot change its value.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge\&logo=github)](https://sohanur-rahman-coding.github.io/GitHub-Issues-Tracker/)
 
+## 📝 Project Overview
 
-2️⃣ What is the spread operator (...)?
+**GitHub Issue Tracker** is a **dynamic and interactive web application** built to manage project issues easily. It lets users **filter, view, and explore detailed information** about issues with smooth UI and responsive design.
 
-  = spread operator is one kind of operator. It can copy a array, also its used for merge to array and also  it can spread array's element.
+Live Demo: 👉 [https://sohanur-rahman-coding.github.io/GitHub-Issues-Tracker/](https://sohanur-rahman-coding.github.io/GitHub-Issues-Tracker/)
 
+GitHub Repository: 👉 [https://github.com/sohanur-rahman-coding/GitHub-Issues-Tracker](https://github.com/sohanur-rahman-coding/GitHub-Issues-Tracker)
 
-3️⃣ What is the difference between map(), filter(), and forEach()?
+---
 
-  = those three are array looping method. map are  used for traverse every element of a array and it return something. filter is method who need a condition to run and those element who can match with condition those will be return and other will be removed. forEach is like map method but forEach do not return something. 
+## ✨ Key Features
 
+* 🔍 **Dynamic Issue Filtering** – Toggle between `Open` and `Closed` issues
+* 🪟 **Interactive Modals** – Click any issue card to view full details
+* 🔄 **Real-Time UI Updates** – UI instantly reflects status/category changes
+* 🔐 **Login System** – Demo credentials allow user authentication
+* 🎨 **Priority Color Coding** – High, Medium, Low clearly differentiated
+* 📱 **Responsive Design** – Works on mobile, tablet, and desktop
 
-4️⃣ What is an arrow function?
+---
 
-  = arrow function is shortcut of main function. And it is ES6 latest version of main function. Its syntex : ()=>{} we can use it for one line function and also for multiline.
+## 🛠️ Built With
 
+* **HTML5**
+* **CSS3**
+* **JavaScript (ES6+)**
+* **Custom DOM Manipulation**
+* **Responsive CSS Flexbox & Grid**
 
-5️⃣ What are template literals?
+---
 
-  = when we need to dynamic a string we use template literals. It also called back tik (``). it is a very powerful element we will use it again and again.
+## 📦 Dependencies
+
+No heavy frameworks or libraries — 100% **vanilla JavaScript** for fast loading and clean code.
+
+---
+
+## 🚀 Live Demo
+
+🔗 Check the app here:
+👉 [https://sohanur-rahman-coding.github.io/GitHub-Issues-Tracker/](https://sohanur-rahman-coding.github.io/GitHub-Issues-Tracker/)
+
+---
+
+## 💻 Local Installation
+
+To run the project locally:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/najiba-ta/GitHub_Issue_Tracker.git
+```
+
+2. Open `index.html` in your browser.
+
+3. (Optional) Run a local server for full functionality:
+
+```bash
+# Python 3
+python -m http.server
+```
